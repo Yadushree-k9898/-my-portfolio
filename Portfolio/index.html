@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yadushree's Portfolio</title>
+  <style>
+ 
+    @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Lato:wght@300;400;500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #001F3F;
+      --gold: #D4AF37;
+      --cream: #FDF5E6;
+      --sage: #E6EFE9;
+      --bronze: #CD7F32;
+      --charcoal: #36454F;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      color: var(--charcoal);
+      background-color: var(--sage);
+    }
+
+    /* Sophisticated Header */
+    header {
+      background-color: var(--navy);
+      padding: 1.5rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      box-shadow: 0 2px 20px rgba(0, 31, 63, 0.15);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    nav a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--gold);
+      transition: width 0.4s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Elegant Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%);
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, rgba(212, 175, 55, 0.05) 0%, rgba(205, 127, 50, 0.05) 100%);
+      mix-blend-mode: overlay;
+    }
+
+    .hero h1 {
+      font-family: 'Marcellus', serif;
+      font-size: 4rem;
+      margin-bottom: 1.8rem;
+      color: var(--cream);
+      position: relative;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--sage);
+      margin-bottom: 3.5rem;
+      font-weight: 300;
+      max-width: 600px;
+      letter-spacing: 1px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1.2rem 3rem;
+      font-size: 0.95rem;
+      color: var(--navy);
+      background-color: var(--cream);
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.4s ease;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border: 2px solid var(--gold);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button:hover {
+      background-color: var(--gold);
+      color: var(--navy);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Accent Decorations */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--bronze), var(--gold));
+    }
+
+    /* Refined Footer */
+    footer {
+      padding: 2rem 0;
+      background-color: var(--charcoal);
+      color: var(--cream);
+      text-align: center;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      border-top: 3px solid var(--gold);
+    }
+
+    footer p {
+      opacity: 0.9;
+      text-transform: uppercase;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      nav {
+        gap: 2rem;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+      }
+
+      .cta-button {
+        padding: 1rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Building the web, one project at a time.</p>
+      <a href="projects.html" class="cta-button">Explore Projects</a>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 Yadushree. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

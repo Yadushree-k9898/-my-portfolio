@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Lato:wght@300;400;500&display=swap');
+
+    :root {
+      --navy: #001F3F;
+      --gold: #D4AF37;
+      --cream: #FDF5E6;
+      --sage: #E6EFE9;
+      --bronze: #CD7F32;
+      --charcoal: #36454F;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      color: var(--charcoal);
+      background-color: var(--sage);
+    }
+
+    header {
+      background-color: var(--navy);
+      padding: 1.5rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      box-shadow: 0 2px 20px rgba(0, 31, 63, 0.15);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--gold);
+      transition: width 0.4s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 7rem auto 2rem auto;
+      padding: 0 2rem;
+    }
+
+    h1 {
+      font-family: 'Marcellus', serif;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--gold);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: var(--charcoal);
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid var(--gold);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-card h2 {
+      font-family: 'Marcellus', serif;
+      font-size: 1.5rem;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      color: var(--sage);
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    .project-card a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    .project-card a:hover {
+      background: var(--bronze);
+      color: var(--cream);
+    }
+
+    footer {
+      padding: 2rem 0;
+      background-color: var(--charcoal);
+      color: var(--cream);
+      text-align: center;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      border-top: 3px solid var(--gold);
+    }
+
+    footer p {
+      opacity: 0.9;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        gap: 2rem;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        padding: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+      }
+
+      .cta-button {
+        padding: 1rem 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h1>My Projects</h1>
+    <section class="projects">
+      <div class="project-card">
+        <h2>CartVibe</h2>
+        <p>An e-commerce platform for a seamless shopping experience.</p>
+        <a href="https://github.com/Yadushree-k9898/cartVibe" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h2>Blogverse</h2>
+        <p>A blogging platform with an admin dashboard to manage posts.</p>
+        <a href="https://github.com/Yadushree-k9898/myBlog-app" target="_blank">View on GitHub</a>
+      </div>
+
+      <div class="project-card">
+        <h2>Password Generator</h2>
+        <p>A tool to create secure and unique passwords.</p>
+        <a href="https://mellifluous-cascaron-b228be.netlify.app/" target="_blank">View Live</a>
+      </div>
+
+      <div class="project-card">
+        <h2>Background Color Changer</h2>
+        <p>A fun app to change background colors dynamically.</p>
+        <a href="https://admirable-sunburst-87cd31.netlify.app/" target="_blank">View Live</a>
+      </div>
+
+      <div class="project-card">
+        <h2>To-Do List</h2>
+        <p>A simple and effective to-do list for daily tasks.</p>
+        <a href="https://dapper-halva-059dc3.netlify.app/" target="_blank">View Live</a>
+      </div>
+
+      <div class="project-card">
+        <h2>BMI Calculator</h2>
+        <p>Quickly calculate your Body Mass Index with this tool.</p>
+        <a href="https://marvelous-mermaid-ddad0a.netlify.app/" target="_blank">View Live</a>
+      </div>
+
+      <div class="project-card">
+        <h2>My Deployments</h2>
+        <p>Explore my live hosted projects:</p>
+        <ul>
+          <li><a href="https://app.netlify.com/teams/yadushree/overview" target="_blank">Netlify Projects</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© 2024 Yadushree. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

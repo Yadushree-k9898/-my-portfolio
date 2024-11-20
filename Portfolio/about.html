@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #001F3F;
+      --gold: #D4AF37;
+      --cream: #FDF5E6;
+      --sage: #E6EFE9;
+      --bronze: #CD7F32;
+      --charcoal: #36454F;
+      --light-sage: #F0F8F1;
+      --dark-charcoal: #2C3E50;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-charcoal);
+      background-color: var(--sage);
+    }
+
+    header {
+      background-color: var(--navy);
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      box-shadow: 0 2px 15px rgba(0, 31, 63, 0.2);
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    nav a {
+      color: var(--cream);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.6rem 0;
+      position: relative;
+      transition: color 0.3s ease-in-out;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 6rem auto;
+      padding: 0 2rem;
+    }
+
+    h1 {
+      font-family: 'Marcellus', serif;
+      font-size: 3.2rem;
+      text-align: center;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    .about-content {
+      text-align: center;
+    }
+
+    .about-content p {
+      font-size: 1.1rem;
+      color: var(--charcoal);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .skills {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .skills h3 {
+      background-color: var(--navy);
+      padding: 1rem;
+      color: var(--cream);
+      border-radius: 6px;
+      font-size: 2.5rem; /* Increased the icon size */
+      transition: background-color 0.3s ease;
+    }
+
+    .skills h3 i {
+      font-size: 3rem; /* Icon size increased */
+      margin-right: 0;
+    }
+
+    .skills h3:hover {
+      background-color: var(--gold);
+    }
+
+    footer {
+      padding: 2rem 0;
+      background-color: var(--charcoal);
+      color: var(--cream);
+      text-align: center;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      border-top: 3px solid var(--gold);
+      margin-top: 5rem;
+    }
+
+    footer p {
+      opacity: 0.9;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        gap: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      .about-content {
+        padding: 1.2rem;
+      }
+
+      .skills {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About Me</h1>
+    <section class="about-content">
+      <p>Hello, I'm Yadushree, a passionate full-stack developer with a deep interest in web development. I have experience with HTML, CSS, JavaScript, React.js, Node.js, Django, and more. I love creating seamless, user-friendly applications that make an impact.</p>
+
+      <p>I’m constantly learning and improving, and I’m excited to contribute to innovative projects and collaborate with like-minded individuals.</p>
+    </section>
+
+    <section class="skills">
+      <h3><i class="fab fa-html5"></i></h3>
+      <h3><i class="fab fa-js-square"></i></h3>
+      <h3><i class="fab fa-react"></i></h3>
+      <h3><i class="fab fa-node"></i></h3>
+      <h3><i class="fab fa-python"></i></h3>
+      <h3><i class="fas fa-database"></i></h3>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Yadushree. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

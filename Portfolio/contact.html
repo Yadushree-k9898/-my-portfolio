@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Lato:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #001F3F; /* Navy Blue */
+      --gold: #D4AF37;
+      --cream: #FDF5E6;
+      --sage: #E6EFE9;
+      --bronze: #CD7F32;
+      --charcoal: #36454F;
+      --light-sage: #F0F8F1;
+      --dark-charcoal: #2C3E50;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-charcoal);
+      background-color: var(--sage); /* Lighter background */
+    }
+
+    header {
+      background-color: var(--navy);
+      padding: 1.5rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      box-shadow: 0 2px 20px rgba(0, 31, 63, 0.15);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--gold);
+      transition: width 0.4s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 6rem auto;
+      padding: 0 2rem;
+    }
+
+    h1 {
+      font-family: 'Marcellus', serif;
+      font-size: 3rem;
+      text-align: center;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      background: var(--navy); /* Updated background color to Navy Blue */
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid rgba(100, 255, 218, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-item h2 {
+      font-family: 'Marcellus', serif;
+      font-size: 1.5rem;
+      color: var(--cream);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-item p {
+      color: var(--charcoal);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-item a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    .contact-item a:hover {
+      background: rgba(255, 223, 81, 0.8);
+    }
+
+    footer {
+      padding: 2rem 0;
+      background-color: var(--charcoal);
+      color: var(--cream);
+      text-align: center;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      border-top: 3px solid var(--gold);
+    }
+
+    footer p {
+      opacity: 0.9;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        gap: 2rem;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-item {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Me</h1>
+    <section class="contact">
+      <div class="contact-item">
+        <h2>Email</h2>
+        <p><a href="mailto:kyadushree47@gmail.com">kyadushree47@gmail.com</a></p>
+      </div>
+
+      <div class="contact-item">
+        <h2>Phone</h2>
+        <p><a href="tel:+919108404227">+91 9108404227</a></p>
+      </div>
+
+      <div class="contact-item">
+        <h2>GitHub</h2>
+        <p><a href="https://github.com/Yadushree-k9898" target="_blank">github.com/Yadushree-k9898</a></p>
+      </div>
+
+      <div class="contact-item">
+        <h2>LinkedIn</h2>
+        <p><a href="https://www.linkedin.com/in/yadushree-k" target="_blank">linkedin.com/in/yadushree</a></p>
+      </div>
+
+      <div class="contact-item">
+        <h2>Twitter</h2>
+        <p><a href="https://x.com/KYadushree" target="_blank">Twitter Profile</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Yadushree. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
